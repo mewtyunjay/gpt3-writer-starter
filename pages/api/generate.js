@@ -6,11 +6,11 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-// const basePromptPrefix =
-//   `
-//   With the name of the dish on top, write me a detailed step-by-step recipe by a professional chef for something healthy I can make with the following ingredients:
+const basePromptPrefix =
+  `
+  With the name of the dish on top, write me a detailed step-by-step recipe by a professional chef for something healthy I can make with the following ingredients:
   
-//   `
+  `
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
